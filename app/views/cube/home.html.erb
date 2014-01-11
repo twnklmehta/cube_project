@@ -1,0 +1,19 @@
+
+<%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css","application" %>
+<%= image_tag("cubeimage.jpg",:alt => "CUBE", :class => "round", :width => "200px")%>
+
+
+<marquee><h2 style="color:blue"> WELCOME TO CUBE</h2> </marquee>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div id="teachers_nav">
+	<% if teacher_signed_in? %>
+	Signed in as <%= current_teacher.email %>. Not you?
+	<%= link_to "Sign Out", destroy_teacher_session_path, :method => "DELETE" %>
+
+	<% else %>
+	<h5><%= link_to "Sign up",new_teacher_registration_path %> or <%= link_to "Sign in", new_teacher_session_path %></h5>
+	<% end %>
+	<p class="search_button"><%= link_to "Search Questions",questions_path %></p>
+	<%= yield %>
+</div>
