@@ -13,6 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery-ui-1.10.3.custom
+//= require jquery-1.9.1
+//= require jquery-ui-1.10.3.custom.min
 
 	
 
+$(function(){
+	("#date_of_birth").datepicker();
+});
