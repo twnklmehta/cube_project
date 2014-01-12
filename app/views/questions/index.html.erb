@@ -2,7 +2,7 @@
 <p><%= link_to "Home", cube_home_path %></p>
 <%= form_tag questions_path, :method => 'get' do %>
 <p>
-  <%= text_field_tag :search, params[:chapter_name] %>
+  <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search", :name => nil %>
 </p>
 <% end %>

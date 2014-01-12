@@ -12,13 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+//= require bootstrap-datetimepicker
 //= require_tree .
-//= require jquery-ui-1.10.3.custom
-//= require jquery-1.9.1
-//= require jquery-ui-1.10.3.custom.min
+$('.teachers_date_of_birth').datepicker()
 
-	
 
-$(function(){
-	("#date_of_birth").datepicker();
-});
