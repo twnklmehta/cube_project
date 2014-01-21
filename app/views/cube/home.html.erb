@@ -1,7 +1,22 @@
 
-<%= image_tag("cubeimage.jpg",:alt => "CUBE", :class => "round", :width => "200px")%>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%= image_tag("the-logo.jpg",:alt => "CUBE", :class => "round", :width => "200px")%>
+
+<header>
+<link rel="stylesheet" href="style.css">
+
+	<nav>
+		<div class="box">
+		<h4>HOME</a></h4> 
+	
+
+	<h4 ><%= link_to "HELP", cube_help_path %></h4>
+
+	<h4 >CONTACT</h4></div></nav>
+
+
+</header>
+<main>
+
 <div id="teachers_nav">
 	<% if teacher_signed_in? %>
 	Signed in as <%= current_teacher.email %>. Not you?
@@ -13,3 +28,4 @@
 	<p class="search_button"><%= link_to "Search Questions",questions_path %></p>
 	<%= yield %>
 </div>
+</main>

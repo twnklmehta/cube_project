@@ -1,0 +1,9 @@
+html{
+	background-color: AliceBlue;
+}
+#home-top-nav ul li{
+	margin: 0 700px;
+	color: MediumSlateBlue;
+	font-weight: bold;
+	display :block;
+}

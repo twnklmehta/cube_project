@@ -1,4 +1,10 @@
 CubeProject::Application.routes.draw do
+ 
+
+  resources :askquestions do
+     resources :comments, :only => [:create]
+   end
+
   resources :projects
 
   resources :questions

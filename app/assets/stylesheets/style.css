@@ -1,0 +1,26 @@
+
+h4:hover{
+	background-color: MediumPurple;
+	color:white;
+}
+h4{
+	background-color: Plum ;
+	color: Indigo;
+	height:25px;
+	width:150px;
+	border-radius:50%;
+	tansition: background-color 2.0s ease-in-out;
+
+}
+nav{
+	position:absolute;
+	/*background-color: CornSilk;*/
+
+}
+#teachers_nav,h5{
+	position:relative;
+	margin-right: 10px;
+	margin-top: 150px;
+background-color: MediumPink;
+
+}

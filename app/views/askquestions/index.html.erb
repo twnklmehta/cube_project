@@ -1,0 +1,10 @@
+<h1>Listing askquestions</h1>
+
+<%= render :partial => @askquestion %>
+
+  
+<%= link_to 'Show', askquestion %>
+        <%= link_to 'Edit', edit_askquestion_path(askquestion) %>
+        <%= link_to 'Destroy', askquestion, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'New Question', new_askquestion_path %>

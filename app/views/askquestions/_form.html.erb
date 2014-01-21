@@ -1,0 +1,29 @@
+<%= form_for(@askquestion) do |f| %>
+  <% if @askquestion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@askquestion.errors.count, "error") %> prohibited this askquestion from being saved:</h2>
+
+      <ul>
+      <% @askquestion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_area :question %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit Question" %>
+  </div>
+<% end %>

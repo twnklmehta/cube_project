@@ -1,11 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+helper_method :sort_column, :sort_direction
   # GET /projects
   # GET /projects.json
   @projects = Project.all
   def index
-    @projects = Project.search(params[:search])
+    @projects = Project.order(sort_column + " " + sort_direction)
   end
 
   # GET /projects/1
@@ -72,4 +72,15 @@ class ProjectsController < ApplicationController
     def project_params
       params.require(:project).permit(:name)
     end
+
+    private
+
+    def sort_column
+      params[:sort] || "name"
+    end
+    def sort_direction
+      params[:direction] || "asc"
+    end
 end
+
+

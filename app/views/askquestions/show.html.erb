@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<%= render :partial => @askquestion %>
+
+<%= link_to 'Edit', edit_askquestion_path(@askquestion) %> |
+<%= link_to 'Back', askquestions_path %>
+<h2>Comments</h2>
+<div id="comments">
+	<%= render :partial => @askquestion.comments %>
+</div>
+<%= form_for [@askquestion,Comment.new] do |f| %>
+	<p>
+		<<%= f.label :body, "New comment" %><br/>
+		<%= f.textarea :body %>
+	</p>
+	<p> <%= f.submit "Add comment" %></p>
+	<% end %>

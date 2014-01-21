@@ -1,2 +1,29 @@
-<h1>Cube#help</h1>
-<p>Find me in app/views/cube/help.html.erb</p>
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<head>
+	<title>CUBE</title>
+	<link rel="stylesheet" href="application.css" />
+	
+</head>
+<body>
+
+
+<section id="home-top">
+	<header id="icon-image">
+		<%= image_tag("the-logo.jpg",:alt => "CUBE", :class => "round", :width => "200px")%>
+	</header>
+	<nav id="home-top-nav">
+		<ul>
+			<li><%= link_to "HOME",cube_home_path %></li>
+			<li><%= link_to "HELP",cube_help_path%></li>
+			<li><%= link_to "CONTACT",cube_contact_path%></li>
+		</ul>
+	</nav>
+</section>
+<section id="body">
+	<header> HELLO THIS IS CUBE</header>
+</section>
+</body>
+
+

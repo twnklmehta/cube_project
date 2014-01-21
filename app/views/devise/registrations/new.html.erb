@@ -1,13 +1,6 @@
 <h2>Register</h2>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-<!--<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="//code.jquery.com/jquery-1.9.1.js"></script>
 
-<script>
-  $(function() {
-    $( ".date_of_birth" ).datepicker();
-  });
-  </script>-->
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -50,7 +43,7 @@
   <%= f.text_field :f_h_name, :autofocus => true %></div>
 
     <div><%= f.label :date_of_birth %><br />
-  <%= f.text_field :date_of_birth,'data-behaviour' => 'datepicker' %> </div>
+  <%= f.date_select :date_of_birth,'data-behaviour' => 'datepicker' ,:autofocus => true %> </div>
 </fieldset>
   <fieldset><legend> EDUCATION DETAILS </legend>
 
